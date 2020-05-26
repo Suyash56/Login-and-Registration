@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+<display-name>login</display-name>
+ 
+
+<!-- 
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+   
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+</web-app>
+ -->
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>index</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registration</servlet-name>
+        <servlet-class>registration</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>welcome</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>ConnectionPro</servlet-name>
+        <servlet-class>newpackage.ConnectionPro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>newpackage.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>User</servlet-name>
+        <servlet-class>newpackage.User</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserDatabase</servlet-name>
+        <servlet-class>newpackage.UserDatabase</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>newpackage.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConnectionPro</servlet-name>
+        <url-pattern>/ConnectionPro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>User</servlet-name>
+        <url-pattern>/User</url-pattern>
+    </servlet-mapping><servlet-mapping>
+        <servlet-name>UserDatabase</servlet-name>
+        <url-pattern>/UserDatabase</url-pattern>
+    </servlet-mapping><servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping><servlet-mapping>
+        <servlet-name>registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+   <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+     <resource-ref>
+      <description>DB Connection</description>
+      <res-ref-name>jdbc/TestDB</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+     </resource-ref>
+  </web-app>
